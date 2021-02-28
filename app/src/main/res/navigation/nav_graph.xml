@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.salahafaghani.simpleimageslider.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_imageSlideDialogFragment"
+            app:destination="@id/imageSlideDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/imageSlideDialogFragment"
+        android:name="com.salahafaghani.simpleimageslider.ImageSliderDialogFragment"
+        tools:layout="@layout/fragment_image_slider">
+        <argument
+            android:name="imageUrls"
+            app:argType="string[]" />
+    </dialog>
+</navigation>
